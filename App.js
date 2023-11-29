@@ -1,6 +1,9 @@
 const express= require('express');
 const app =  express();
 const mongoose = require('mongoose');
+const router = require('./Routes/userRouter');
+
+app.use("/app", router);
 
 mongoose.connect('mongodb+srv://sachinrao9450:Cel123451234@cluster0.ogdvtio.mongodb.net/').then(()=>app.listen(4500, ()=>{
     console.log('server is running');
